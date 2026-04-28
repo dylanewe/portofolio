@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Dylan Ewe</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP NAV -->
+  <nav id="topnav">
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">home</a>
+      <a href="projects.html" class="nav-link active">projects</a>
+    </div>
+  </nav>
+
+  <!-- LAYER 0: Spinning donut ASCII background -->
+  <pre id="donut" aria-hidden="true"></pre>
+
+  <!-- LAYER 1: Scrollable content -->
+  <div id="content">
+
+    <div class="page-header">
+      <h1 class="page-title">// projects</h1>
+      <p class="page-subtitle" id="repo-subtitle">fetching from github<span class="loading-dots"><span>.</span><span>.</span><span>.</span></span></p>
+    </div>
+
+    <!-- Sort / filter toolbar -->
+    <div class="repo-toolbar">
+      <select id="sort-select" aria-label="Sort repositories">
+        <option value="updated">sort: recently updated</option>
+        <option value="stars">sort: most stars</option>
+        <option value="name">sort: name a–z</option>
+      </select>
+
+      <label>
+        <input type="checkbox" id="hide-forks"> hide forks
+      </label>
+
+      <span class="repo-count" id="repo-count"></span>
+    </div>
+
+    <!-- Repo cards injected here by JS -->
+    <div class="repo-grid" id="repo-grid">
+      <div class="repo-loading">
+        <span class="loading-dots"><span>.</span><span>.</span><span>.</span></span>
+      </div>
+    </div>
+
+  </div><!-- /#content -->
+
+  <script src="script.js"></script>
+  <script src="projects.js"></script>
+</body>
+</html>
