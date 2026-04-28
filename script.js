@@ -11,20 +11,29 @@
   const TARGET_FPS = 16;
   const FRAME_INTERVAL = 1000 / TARGET_FPS;
 
-  // Approximate pixel size of one monospace character at our CSS font size.
-  // Tuned for clamp(6px, 1vw, 11px) — we use 10x18 as a stable midpoint.
-  const CHAR_W = 8;
-  const CHAR_H = 14;
-
   let A = 0; // rotation angle around X axis
   let B = 0; // rotation angle around Z axis
   let W, H;  // grid dimensions in characters
   let rafId;
   let lastTime = 0;
 
+  // Measure actual rendered character size so the grid fills the viewport
+  // correctly on any screen size or font size (mobile, tablet, desktop).
+  function measureChar() {
+    var probe = document.createElement('span');
+    probe.style.cssText = 'position:absolute;visibility:hidden;white-space:pre;line-height:1;font-family:inherit;font-size:inherit;';
+    probe.textContent = 'X';
+    donutEl.appendChild(probe);
+    var w = probe.offsetWidth  || 8;
+    var h = probe.offsetHeight || 14;
+    donutEl.removeChild(probe);
+    return { w: Math.max(w, 1), h: Math.max(h, 1) };
+  }
+
   function computeDimensions() {
-    W = Math.max(40, Math.floor(window.innerWidth  / CHAR_W));
-    H = Math.max(20, Math.floor(window.innerHeight / CHAR_H));
+    var ch = measureChar();
+    W = Math.max(20, Math.floor(window.innerWidth  / ch.w));
+    H = Math.max(10, Math.floor(window.innerHeight / ch.h));
   }
 
   function renderDonut() {
