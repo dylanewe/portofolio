@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Star, GitFork, Code2, AlertCircle } from 'lucide-react';
+import { Star, GitFork, AlertCircle } from 'lucide-react';
 import SectionLabel from '@/components/SectionLabel';
 import ProjectModal from '@/components/ProjectModal';
 import type { Project, GitHubRepo } from '@/types';
