@@ -25,7 +25,9 @@ const StarfieldCanvas = () => {
     if (!ctx) return;
 
     const resize = () => {
-      canvas.width = window.innerWidth * 5;
+      // Mobile only needs viewport-width canvas; desktop needs extra width for parallax
+      const isMobile = window.innerWidth < 768;
+      canvas.width = isMobile ? window.innerWidth : window.innerWidth * 5;
       canvas.height = window.innerHeight;
       generateStars();
     };
@@ -108,7 +110,7 @@ const StarfieldCanvas = () => {
       ref={canvasRef}
       className="starfield-canvas w-full h-full block pointer-events-none"
       aria-hidden="true"
-      style={{ willChange: 'transform' }}
+      style={{ willChange: 'transform', maxWidth: '100vw' }}
     />
   );
 };
