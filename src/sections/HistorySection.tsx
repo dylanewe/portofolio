@@ -157,7 +157,7 @@ const HistorySection = () => {
           {/* Vertical line */}
           <div
             ref={lineRef}
-            className="absolute left-[7px] md:left-[11px] top-0 bottom-0 origin-top"
+            className="absolute left-[7px] top-0 bottom-0 origin-top"
             style={{
               width: '2px',
               background: 'linear-gradient(to bottom, var(--neon-purple), var(--pixel-pink), transparent)',

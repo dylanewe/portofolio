@@ -133,7 +133,7 @@ function App() {
       backgroundAttachment: 'fixed',
     }}>
       {/* Purple nebula glow overlays */}
-      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 0 }}>
+      <div className="fixed inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 0 }}>
         <div style={{
           position: 'absolute', top: '10%', left: '20%',
           width: '600px', height: '600px',
