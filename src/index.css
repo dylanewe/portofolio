@@ -76,6 +76,15 @@
   align-items: center;
 }
 
+@media (max-width: 767px) {
+  .section-panel {
+    width: 100%;
+    min-height: auto;
+    height: auto;
+    padding: 100px 0;
+  }
+}
+
 /* ======================== */
 /* GLASSMORPHIC CARDS       */
 /* ======================== */

@@ -39,7 +39,7 @@ const NavBar = ({ progress, onNavigate }: NavBarProps) => {
         >
           <PixelIcon {...pixelStarSmall} scale={1} />
           <span
-            className="text-white glow-purple hidden sm:inline"
+            className="text-white glow-purple"
             style={{ fontFamily: 'var(--pixel-font)', fontSize: '10px', letterSpacing: '2px' }}
           >
             DYLAN EWE

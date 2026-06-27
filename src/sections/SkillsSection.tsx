@@ -74,7 +74,7 @@ const SkillsSection = () => {
     <section ref={sectionRef} id="skills" className="section-panel">
       {/* Purple glow behind ringed planet */}
       <div
-        className="absolute pointer-events-none"
+        className="absolute pointer-events-none hidden md:block"
         style={{
           width: '500px',
           height: '500px',
@@ -90,7 +90,7 @@ const SkillsSection = () => {
         ref={planetRef}
         src="/assets/ringed-planet.png"
         alt=""
-        className="pixel-art absolute opacity-0 float-slow"
+        className="pixel-art absolute opacity-0 float-slow hidden md:block"
         style={{
           width: 'min(32vw, 360px)',
           top: '8%',

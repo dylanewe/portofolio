@@ -159,7 +159,7 @@ const ContactSection = () => {
             color: 'rgba(240, 230, 255, 0.6)',
           }}
         >
-          Ready for a new mission?
+          Open to opportunities and collaborations. Let's connect.
         </p>
 
         {/* Contact card */}

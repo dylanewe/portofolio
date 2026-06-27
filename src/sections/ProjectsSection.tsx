@@ -227,7 +227,7 @@ const ProjectsSection = () => {
 
       {/* Content */}
       <div className="relative px-6 md:px-20 max-w-[900px] w-full" style={{ zIndex: 2 }}>
-        <div className="text-center md:text-left">
+        <div className="text-left">
           <SectionLabel text="SECTOR 04" className="justify-center md:justify-start" />
 
           <h2
